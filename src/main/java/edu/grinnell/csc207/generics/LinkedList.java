@@ -5,6 +5,12 @@ public class LinkedList<T> {
         private U value;
         private Node<U> next;
 
+        /**
+         * Construct a new node with the given value
+         * 
+         * @param value the value
+         * @param next  the next node
+         */
         public Node(U value, Node<U> next) {
             this.value = value;
             this.next = null;
@@ -17,6 +23,11 @@ public class LinkedList<T> {
         this.first = null;
     }
 
+    /**
+     * Adds value to the end of the list
+     * 
+     * @param value the value to add to the end of the list
+     */
     public void add(T value) {
         if (first == null) {
             first = new Node<T>(value, null);
@@ -29,6 +40,9 @@ public class LinkedList<T> {
         }
     }
 
+    /**
+     * @return the number of elements in the list
+     */
     public int size() {
         int sz = 0;
         Node<T> cur = first;
@@ -39,6 +53,10 @@ public class LinkedList<T> {
         return sz;
     }
 
+    /**
+     * @param index the index of the element to retrieve
+     * @return the value at the specified index
+     */
     public T get(int index) {
         if (index < 0) {
             throw new IndexOutOfBoundsException(index);
@@ -56,6 +74,12 @@ public class LinkedList<T> {
         }
     }
 
+    /**
+     * Removes the value at index from the list
+     * 
+     * @param index the index of the element to remove
+     * @return the element at index
+     */
     public T remove(int index) {
         if (index < 0 || (index == 0 && first == null)) {
             throw new IndexOutOfBoundsException(index);
