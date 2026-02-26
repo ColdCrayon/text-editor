@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * An array-based implementation of a list, specialized to ints.
  */
-public class ArrayList<T> {
+public class ArrayList<T> implements List<T> {
 
     private static final int INITIAL_SIZE = 8;
 
