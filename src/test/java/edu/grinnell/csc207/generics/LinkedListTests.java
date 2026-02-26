@@ -94,7 +94,7 @@ public class LinkedListTests {
 
     @Test
     public void listGetSeveralStrings() {
-        LinkedListString l = new LinkedListString();
+        LinkedList<String> l = new LinkedList<String>();
         String[] elements = new String[] { "a", "b", "c", "d", "e", "f", "g" };
         for (int i = 0; i < elements.length; i++) {
             l.add(elements[i]);
