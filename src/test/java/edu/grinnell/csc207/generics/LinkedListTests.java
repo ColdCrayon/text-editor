@@ -5,16 +5,16 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
-public class ArrayListTests {
+public class LinkedListTests {
     @Test
     public void emptyListTest() {
-        ArrayList<Integer> l = new ArrayList<>();
+        LinkedList<Integer> l = new LinkedList<Integer>();
         assertEquals(0, l.size());
     }
 
     @Test
     public void listAddSize10Nums() {
-        ArrayList<Integer> l = new ArrayList<>();
+        LinkedList<Integer> l = new LinkedList<Integer>();
         for (int i = 0; i < 10; i++) {
             l.add(i);
         }
@@ -23,7 +23,7 @@ public class ArrayListTests {
 
     @Test
     public void listAddNegNums() {
-        ArrayList<Integer> l = new ArrayList<>();
+        LinkedList<Integer> l = new LinkedList<Integer>();
         l.add(-3);
         l.add(-10);
         l.add(-22);
@@ -34,7 +34,7 @@ public class ArrayListTests {
 
     @Test
     public void listGetSeveral() {
-        ArrayList<Integer> l = new ArrayList<>();
+        LinkedList<Integer> l = new LinkedList<Integer>();
         int[] elements = new int[] { 3, 8, 7, 2, 6, 5, 0 };
         for (int i = 0; i < elements.length; i++) {
             l.add(elements[i]);
@@ -46,7 +46,7 @@ public class ArrayListTests {
 
     @Test
     public void listGetOOB() {
-        ArrayList<Integer> l = new ArrayList<>();
+        LinkedList<Integer> l = new LinkedList<Integer>();
         l.add(3);
         l.add(2);
         l.add(7);
@@ -60,7 +60,7 @@ public class ArrayListTests {
 
     @Test
     public void listRemoveSome() {
-        ArrayList<Integer> l = new ArrayList<>();
+        LinkedList<Integer> l = new LinkedList<Integer>();
         l.add(5);
         l.add(8);
         l.add(7);
@@ -80,7 +80,7 @@ public class ArrayListTests {
 
     @Test
     public void listRemoveOOB() {
-        ArrayList<Integer> l = new ArrayList<>();
+        LinkedList<Integer> l = new LinkedList<Integer>();
         l.add(5);
         l.add(8);
         l.add(7);
@@ -94,7 +94,7 @@ public class ArrayListTests {
 
     @Test
     public void listGetSeveralStrings() {
-        ArrayList<String> l = new ArrayList<>();
+        LinkedListString l = new LinkedListString();
         String[] elements = new String[] { "a", "b", "c", "d", "e", "f", "g" };
         for (int i = 0; i < elements.length; i++) {
             l.add(elements[i]);
