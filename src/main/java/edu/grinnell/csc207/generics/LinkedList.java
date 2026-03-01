@@ -103,4 +103,36 @@ public class LinkedList<T> implements List<T> {
             }
         }
     }
+
+    public void intersperse(T sep) {
+        Node<T> cur = first;
+
+        while (cur.next != null) {
+            Node<T> sepNode = new Node<T>(sep, cur.next);
+            cur.next = sepNode;
+            cur = cur.next.next;
+        }
+    }
+
+    public T maximum() {
+        throw new UnsupportedOperationException();
+    }
+
+    public String toString() {
+        Node<T> cur = first;
+        String res = "[";
+
+        while (cur.next != null) {
+            res = cur.value.toString() + ", ";
+            cur = cur.next;
+        }
+
+        res += cur.value;
+
+        return res + "]";
+    }
+
+    public void insertionSort() {
+        throw new UnsupportedOperationException();
+    }
 }
