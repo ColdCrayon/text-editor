@@ -104,6 +104,11 @@ public class LinkedList<T> implements List<T> {
         }
     }
 
+    /**
+     * Inserts `sep` in between each element of the list
+     * 
+     * @param sep the value to be inserted
+     */
     public void intersperse(T sep) {
         Node<T> cur = first;
 
@@ -114,10 +119,19 @@ public class LinkedList<T> implements List<T> {
         }
     }
 
+    /**
+     * Returns the maximum element found in the list
+     */
     public T maximum() {
         throw new UnsupportedOperationException();
     }
 
+    /**
+     * Places all element of the list into a string representation of the list.
+     * of the form [x1, x2, ..., xk]
+     * 
+     * @return the string representation of the list
+     */
     public String toString() {
         Node<T> cur = first;
         String res = "[";
@@ -132,6 +146,9 @@ public class LinkedList<T> implements List<T> {
         return res + "]";
     }
 
+    /**
+     * Sorts the list using the insertion method
+     */
     public void insertionSort() {
         throw new UnsupportedOperationException();
     }

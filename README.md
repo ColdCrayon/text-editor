@@ -10,6 +10,7 @@
 + https://www.geeksforgeeks.org/java/generics-in-java/
 
 ## Changelog
+
 commit 64989bb3d3f7cc79f303a9c1f87448bceb9048c1
 Author: johnkafumbe <kafumbejbrown@gmail.com>
 Date:   Sun Mar 1 18:30:35 2026 -0600
@@ -121,6 +122,7 @@ Author: Cadel Saszik <96507526+ColdCrayon@users.noreply.github.com>
 Date:   Wed Feb 25 16:51:53 2026 -0600
 
     Initial commit
+
 
 ## Part 2: Analyzing Simple String Buffer Runtime
 
