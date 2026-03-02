@@ -1,31 +1,31 @@
 package edu.grinnell.csc207.inheritance;
 
-public abstract class AbstractEmployee implements Employee{
-        protected String name;
-        protected String id;
-        protected int salary;
+public abstract class AbstractEmployee implements Employee {
+    protected String name;
+    protected String id;
+    protected int salary;
 
-        public AbstractEmployee(String name, String id, int salary){
-            this.name = name;
-            this.id = id;
-            this.salary = salary;
-        }
+    public AbstractEmployee(String name, String id, int salary) {
+        this.name = name;
+        this.id = id;
+        this.salary = salary;
+    }
 
     /** @return the employee's name. */
     @Override
-    public String getName(){
+    public String getName() {
         return this.name;
     }
 
     /** @return the employee's ID. */
     @Override
-    public String getId(){
+    public String getId() {
         return this.id;
     }
 
     /** @return the employee's salary. */
     @Override
-    public int getSalary(){
+    public int getSalary() {
         return this.salary;
     }
 
@@ -34,4 +34,3 @@ public abstract class AbstractEmployee implements Employee{
     public abstract String makeWorkNoise();
 
 }
-

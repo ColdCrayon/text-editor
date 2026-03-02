@@ -25,12 +25,12 @@ public class SimpleStringBuffer implements Buffer {
         content = before + ch + after;
         cursor++;
     }
-    
+
     /**
      * Deletes the character behind the cursor.
      */
     public void delete() {
-        if (cursor > 0){
+        if (cursor > 0) {
             String before = content.substring(0, cursor);
             String after = content.substring(cursor);
             content = before + after;
@@ -49,7 +49,7 @@ public class SimpleStringBuffer implements Buffer {
      * Moves the cursor to the left.
      */
     public void moveLeft() {
-        if (cursor > 0){
+        if (cursor > 0) {
             cursor--;
         }
     }
@@ -58,7 +58,7 @@ public class SimpleStringBuffer implements Buffer {
      * Moves the cursor to the right.
      */
     public void moveRight() {
-        if (cursor < content.length()){
+        if (cursor < content.length()) {
             cursor++;
         }
     }
@@ -75,7 +75,7 @@ public class SimpleStringBuffer implements Buffer {
      * @throws IndexOutOfBoundsException if i is an invalid index into the buffer.
      */
     public char getChar(int i) {
-        if (i < 0 || i >= content.length()){
+        if (i < 0 || i >= content.length()) {
             throw new IndexOutOfBoundsException("Invalid index");
         }
         return content.charAt(i);
@@ -83,6 +83,6 @@ public class SimpleStringBuffer implements Buffer {
 
     @Override
     public String toString() {
-       return this.content;
+        return this.content;
     }
 }

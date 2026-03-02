@@ -9,7 +9,7 @@ import net.jqwik.api.Property;
 
 public class SimpleStringBufferTests {
     @Test
-    public void testInsertAndCursorPosition(){
+    public void testInsertAndCursorPosition() {
         SimpleStringBuffer buffer = new SimpleStringBuffer();
         buffer.insert('A');
         buffer.insert('V');
@@ -19,7 +19,7 @@ public class SimpleStringBufferTests {
     }
 
     @Test
-    public void testMove(){
+    public void testMove() {
         SimpleStringBuffer buffer = new SimpleStringBuffer();
         buffer.insert('A');
         buffer.insert('V');
@@ -30,10 +30,10 @@ public class SimpleStringBufferTests {
     }
 
     @Test
-    public void testDeleteAndCornerCase(){
+    public void testDeleteAndCornerCase() {
         SimpleStringBuffer buffer = new SimpleStringBuffer();
-        
-        //Delete Empty Test
+
+        // Delete Empty Test
         buffer.delete();
         assertEquals("", buffer.toString());
 
@@ -47,7 +47,7 @@ public class SimpleStringBufferTests {
     }
 
     @Property
-    boolean insertAlwaysIncreasesSize(@ForAll char c){
+    boolean insertAlwaysIncreasesSize(@ForAll char c) {
         SimpleStringBuffer buffer = new SimpleStringBuffer();
         int intialSize = buffer.getSize();
         buffer.insert(c);

@@ -19,13 +19,14 @@ public class TextEditor {
 
     /**
      * Clears the screen and renders the current state of the gapBuffer
+     * 
      * @param args
      */
 
     public static void drawBuffer(GapBuffer buf, Screen screen) throws IOException {
         screen.clear();
-        
-        for (int i = 0; i < buf.getSize(); i++){
+
+        for (int i = 0; i < buf.getSize(); i++) {
             char c = buf.getChar(i);
             TextCharacter tc = TextCharacter.fromCharacter(c)[0];
             screen.setCharacter(i, 0, tc);
@@ -37,6 +38,7 @@ public class TextEditor {
 
     /**
      * The main entry point for the TextEditor application.
+     * 
      * @param args command-line arguments.
      * @throws IOException if file or terminal operations fail.
      */
@@ -50,9 +52,9 @@ public class TextEditor {
         Path path = Paths.get(fileName);
         GapBuffer buf = new GapBuffer();
 
-        if(Files.exists(path)){
+        if (Files.exists(path)) {
             String content = Files.readString(path);
-            for(int i = 0; i < content.length(); i++){
+            for (int i = 0; i < content.length(); i++) {
                 buf.insert(content.charAt(i));
             }
         }
@@ -67,22 +69,22 @@ public class TextEditor {
             KeyStroke stroke = screen.readInput();
             KeyType type = stroke.getKeyType();
 
-            if (type == KeyType.Escape){
+            if (type == KeyType.Escape) {
                 isRunning = false;
-            } else if (type == KeyType.Character){
+            } else if (type == KeyType.Character) {
                 char typedChar = stroke.getCharacter();
-                buf.insert(typedChar); 
-            } else if (type == KeyType.Backspace){
+                buf.insert(typedChar);
+            } else if (type == KeyType.Backspace) {
                 buf.delete();
-            } else if (type == KeyType.ArrowLeft){
+            } else if (type == KeyType.ArrowLeft) {
                 buf.moveLeft();
-            } else if (type == KeyType.ArrowRight){
+            } else if (type == KeyType.ArrowRight) {
                 buf.moveRight();
             }
         }
 
         screen.stopScreen();
-        
+
         String finalOutput = buf.toString();
         Files.writeString(path, finalOutput);
 

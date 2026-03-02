@@ -14,8 +14,8 @@ public class CEO {
     /**
      * Constructs a new CEO.
      *
-     * @param name the CEO's name.
-     * @param id the CEO's ID.
+     * @param name      the CEO's name.
+     * @param id        the CEO's ID.
      * @param reportees the CEO's direct reports.
      */
     public CEO(String name, String id, List<Employee> reportees) {
