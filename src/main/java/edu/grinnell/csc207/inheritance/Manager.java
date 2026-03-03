@@ -14,8 +14,8 @@ public class Manager implements Employee {
     /**
      * Constructs a new manager.
      *
-     * @param name the manager's name.
-     * @param id the manager's ID.
+     * @param name      the manager's name.
+     * @param id        the manager's ID.
      * @param reportees the manager's direct reports.
      */
     public Manager(String name, String id, List<Employee> reportees) {

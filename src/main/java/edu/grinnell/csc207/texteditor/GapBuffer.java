@@ -22,18 +22,18 @@ public class GapBuffer implements Buffer {
      * Doubles the size of the backing array when the gap is full.
      * Moves the text after the gap to the end of the new, larger array.
      */
-    private void expand(){
+    private void expand() {
         int oldSize = data.length;
         int newSize = oldSize * 2;
         char[] newData = new char[newSize];
 
-        for(int i = 0; i < gapStart; i++){
+        for (int i = 0; i < gapStart; i++) {
             newData[i] = data[i];
         }
 
         int afterSize = oldSize - gapEnd;
         int newGapEnd = newSize - afterSize;
-        for(int i = 0; i < afterSize; i++){
+        for (int i = 0; i < afterSize; i++) {
             newData[newGapEnd + i] = data[gapEnd + i];
         }
 
@@ -46,7 +46,7 @@ public class GapBuffer implements Buffer {
      */
     @Override
     public void insert(char ch) {
-        if(gapStart == gapEnd){
+        if (gapStart == gapEnd) {
             expand();
         }
         data[gapStart] = ch;
@@ -58,9 +58,9 @@ public class GapBuffer implements Buffer {
      */
     @Override
     public void delete() {
-       if (gapStart > 0){
-        gapStart--;
-       }
+        if (gapStart > 0) {
+            gapStart--;
+        }
     }
 
     /**
@@ -77,24 +77,24 @@ public class GapBuffer implements Buffer {
      */
     @Override
     public void moveLeft() {
-        if (gapStart > 0){
+        if (gapStart > 0) {
             data[gapEnd - 1] = data[gapStart - 1];
             gapStart--;
             gapEnd--;
         }
-    }  
+    }
 
-     /**
+    /**
      * Moves the cursor one position to the right by shifting a character
      * from the right side of the gap to the left side.
      */
     @Override
     public void moveRight() {
-       if (gapEnd < data.length){
-           data[gapStart] = data[gapEnd];
-           gapStart++;
-           gapEnd++;
-       }
+        if (gapEnd < data.length) {
+            data[gapStart] = data[gapEnd];
+            gapStart++;
+            gapEnd++;
+        }
     }
 
     /**
@@ -102,8 +102,8 @@ public class GapBuffer implements Buffer {
      */
     @Override
     public int getSize() {
-       int gapLength = gapEnd - gapStart;
-       return data.length - gapLength;
+        int gapLength = gapEnd - gapStart;
+        return data.length - gapLength;
     }
 
     /**
@@ -111,10 +111,10 @@ public class GapBuffer implements Buffer {
      */
     @Override
     public char getChar(int i) {
-        if (i < 0 || i >= getSize()){
+        if (i < 0 || i >= getSize()) {
             throw new IndexOutOfBoundsException();
         }
-        if (i < gapStart){
+        if (i < gapStart) {
             return data[i];
         } else {
             int gapLength = gapEnd - gapStart;
@@ -130,12 +130,12 @@ public class GapBuffer implements Buffer {
         int actualSize = getSize();
         char[] result = new char[actualSize];
 
-        for(int i = 0; i < gapStart; i++){
+        for (int i = 0; i < gapStart; i++) {
             result[i] = data[i];
         }
 
         int afterSize = data.length - gapEnd;
-        for(int i = 0; i < afterSize; i++){
+        for (int i = 0; i < afterSize; i++) {
             result[gapStart + i] = data[gapEnd + i];
         }
 

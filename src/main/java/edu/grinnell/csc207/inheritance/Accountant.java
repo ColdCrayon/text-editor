@@ -8,8 +8,9 @@ public class Accountant implements Employee {
 
     /**
      * Constructs a new accountant
+     * 
      * @param name the accountant's name
-     * @param id the accountant's ID
+     * @param id   the accountant's ID
      */
     public Accountant(String name, String id) {
         this.name = "(ACCT) " + name;
