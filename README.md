@@ -11,6 +11,62 @@
 
 ## Changelog
 
+commit 40da88a5302cda2c0bf84dfd62f33b9edce19486
+Merge: 595c854 7cb69c3
+Author: Cadel Saszik <sazc0805@gmail.com>
+Date:   Mon Mar 2 20:42:10 2026 -0600
+
+    Merge branch 'main' of https://github.com/ColdCrayon/text-editor
+
+commit 595c8546b4aaca563b88c0e5402dc45918214c81
+Author: Cadel Saszik <sazc0805@gmail.com>
+Date:   Mon Mar 2 20:42:09 2026 -0600
+
+    Type checks
+
+commit 7cb69c37ef9fb89ad1d12debb745637b494dfa0a
+Author: johnkafumbe <kafumbejbrown@gmail.com>
+Date:   Mon Mar 2 09:18:48 2026 -0600
+
+    Style changes Completed
+
+commit c356dfce1ff7e3686a2221b2ae1b25bd0308ac6d
+Merge: 60fb6a4 fe14742
+Author: johnkafumbe <kafumbejbrown@gmail.com>
+Date:   Mon Mar 2 09:18:43 2026 -0600
+
+    Merge branch 'main' of github.com:ColdCrayon/text-editor
+
+commit 60fb6a405a44bf1cb8ba55684ac57ffab1697ec2
+Author: johnkafumbe <kafumbejbrown@gmail.com>
+Date:   Mon Mar 2 09:18:20 2026 -0600
+
+    Style changes Implemented
+
+commit fe1474279635dea754a26d64ab1f3108cf461d4a
+Author: Cadel Saszik <sazc0805@gmail.com>
+Date:   Sun Mar 1 20:31:14 2026 -0600
+
+    README
+
+commit cee75ac45f74a080726e6546eed025949583b34e
+Author: Cadel Saszik <sazc0805@gmail.com>
+Date:   Sun Mar 1 20:30:21 2026 -0600
+
+    Javadoc comments
+
+commit 4d3acafd69409be8b5ca306fa9ba591be41817fe
+Author: johnkafumbe <kafumbejbrown@gmail.com>
+Date:   Sun Mar 1 20:13:20 2026 -0600
+
+    Text-editor Complete
+
+commit 9779a743b9714dea3406f6412b49f15580b6c693
+Author: Cadel Saszik <sazc0805@gmail.com>
+Date:   Sun Mar 1 18:52:42 2026 -0600
+
+    README
+
 commit 64989bb3d3f7cc79f303a9c1f87448bceb9048c1
 Author: johnkafumbe <kafumbejbrown@gmail.com>
 Date:   Sun Mar 1 18:30:35 2026 -0600
@@ -122,7 +178,6 @@ Author: Cadel Saszik <96507526+ColdCrayon@users.noreply.github.com>
 Date:   Wed Feb 25 16:51:53 2026 -0600
 
     Initial commit
-
 
 ## Part 2: Analyzing Simple String Buffer Runtime
 
