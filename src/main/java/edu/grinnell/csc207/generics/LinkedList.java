@@ -123,7 +123,18 @@ public class LinkedList<T> implements List<T> {
      * Returns the maximum element found in the list
      */
     public T maximum() {
-        throw new UnsupportedOperationException();
+        if (first.value instanceof String) {
+            throw new UnsupportedOperationException();
+        } else {
+            T max = first.value;
+            for (Node<T> cur = first.next; cur != null; cur = cur.next) {
+                if (((Comparable<T>) cur.value).compareTo(max) > 0) {
+                    max = cur.value;
+                }
+            }
+
+            return max;
+        }
     }
 
     /**
@@ -137,7 +148,7 @@ public class LinkedList<T> implements List<T> {
         String res = "[";
 
         while (cur.next != null) {
-            res = cur.value.toString() + ", ";
+            res = res + cur.value.toString() + ", ";
             cur = cur.next;
         }
 
@@ -150,6 +161,36 @@ public class LinkedList<T> implements List<T> {
      * Sorts the list using the insertion method
      */
     public void insertionSort() {
-        throw new UnsupportedOperationException();
+        if (first.value instanceof String) {
+            throw new UnsupportedOperationException();
+        } else {
+            if (first == null || first.next == null) {
+                return;
+            }
+
+            Node<T> sorted = null;
+            Node<T> cur = first;
+
+            while (cur != null) {
+                Node<T> next = cur.next;
+
+                if (sorted == null || ((Comparable<T>) cur.value).compareTo(sorted.value) < 0) {
+                    cur.next = sorted;
+                    sorted = cur;
+                } else {
+                    Node<T> before = sorted;
+                    while (before.next != null && ((Comparable<T>) before.next.value).compareTo(cur.value) < 0) {
+                        before = before.next;
+                    }
+
+                    cur.next = before.next;
+                    before.next = cur;
+                }
+
+                cur = next;
+            }
+
+            first = sorted;
+        }
     }
 }
